@@ -16,8 +16,11 @@
         name : {
             middle : midName
         },
-
     } = user;
  
+    //array destructuring
 
+    const myfrands = ['Reduan', 'Rafiq', 'Rifat', 'Rabbi', 'Rahman', 'jabbar'];
+
+    const [a, b, c, ...rest] = myfrands;
 }
