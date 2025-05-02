@@ -15,8 +15,28 @@
     const boolArray : GenaricArray<boolean> =  [true,false,true];
     console.log(boolArray);
 
+    // type User ={
+    //     name : string;
+    //     age : number,
+    // }
 
-    const user : GenaricArray<{name:string,age:number}> = [
+
+    interface User {
+        name : string;
+        age : number,
+    }
+    // const user : GenaricArray<{name:string,age:number}> = [
+    //     {
+    //         name : 'reduan',
+    //         age : 100,
+    //     },
+    //     {
+    //         name :'ahmad',
+    //         age : 100,
+    //     },
+    // ]
+
+    const user : GenaricArray<User> = [
         {
             name : 'reduan',
             age : 100,
