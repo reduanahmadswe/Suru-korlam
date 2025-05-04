@@ -106,30 +106,97 @@
     //     }
 
     // }
-    
 
-    interface Developer {
-        name : string,
-        computer :{
-            brand : string,
-            model : string,
-            releseYear : number,
-        }
-        smartWatch : TemplateStringsArray,
+
+    // interface Developer {
+    //     name : string,
+    //     computer :{
+    //         brand : string,
+    //         model : string,
+    //         releseYear : number,
+    //     }
+    //     smartWatch : TemplateStringsArray,
+    // }
+
+    // const poorDeveloper : Developer<> = {
+    //     name : 'reduan',
+    //     computer:{
+    //         brand : 'Asus',
+    //         model : 'fahsdf',
+    //         releaseYear :89435,
+    //     }
+    //     smartWatch :{
+    //         brand : 'Emilab',
+    //         model :'adf',
+    //         display : 'oeld',
+    //     }
+    // }
+
+    type EmilabWatch = {
+
+        brand: string;
+        model: string;
+        display: string;
+
     }
 
-    const poorDeveloper : Developer<> = {
-        name : 'reduan',
-        computer:{
-            brand : 'Asus',
-            model : 'fahsdf',
-            releaseYear :89435,
+    interface Developer<T, X = null> {
+        name: string;
+        computers: {
+            brand: string;
+            model: string;
+            releseYear: number;
         }
-        smartWatch :{
-            brand : 'Emilab',
-            model :'adf',
-            display : 'oeld',
+        smartWatch: T;
+        bike?: X
+    }
+
+    const poorDeveloper: Developer<EmilabWatch> = {
+        name: 'Reduan',
+        computers: {
+            brand: 'dkslf',
+            model: 'klsdahf',
+            releseYear: 8979,
+        },
+        smartWatch: {
+            brand: 'emilab',
+            model: 'sdfj',
+            display: 'OLED',
         }
+
+    }
+
+    interface appleWatch {
+        brand: string;
+        modle: string;
+        hardTrack: boolean;
+        sleepTrack: boolean;
+    }
+
+    interface YamahaBike {
+        model: string;
+        engine: string;
+    }
+
+    const richDeveloper: Developer<appleWatch, YamahaBike> = {
+        name: 'Reduan',
+        computers: {
+            brand: 'dkslf',
+            model: 'klsdahf',
+            releseYear: 8976579,
+        },
+        smartWatch: {
+            brand: 'apple watch',
+            modle: 'lkjsalkdf',
+            hardTrack: true,
+            sleepTrack: true,
+
+        },
+        bike: {
+            model: 'Yamaha',
+            engine: '100cc',
+        }
+
     }
 
 
