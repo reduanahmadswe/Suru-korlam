@@ -41,73 +41,96 @@
 
     //interface - genaric
 
-    interface Developer<T,X> {
-        name: string;
-        computer: {
-            brand: string;
-            model: string;
-            releaseYear: number;
+    // interface Developer<T,X> {
+    //     name: string;
+    //     computer: {
+    //         brand: string;
+    //         model: string;
+    //         releaseYear: number;
+    //     }
+    //     smartWatch: T;
+    //     bike?: X
+    // }
+
+    // type EmilabWatch = {
+    //     brand: string,
+    //     model: string,
+    //     display: string,
+    // }
+
+    // const poorDeveloper: Developer<EmilabWatch,null> = {
+    //     name: 'reduan',
+    //     computer: {
+    //         brand: "Asus",
+    //         model: "iore",
+    //         releaseYear: 7864,
+    //     },
+    //     smartWatch: {
+    //         brand: 'Emilab',
+    //         model: 'kw66',
+    //         display: 'OLED',
+    //     }
+
+    // }
+
+    // interface AppleWatch {
+    //     brand: string,
+    //     model: string,
+    //     heartTrack: boolean,
+    //     sleepTrack: boolean,
+    // }
+
+    // interface YamahaBike {
+    //     model: string,
+    //     engineCapacity : string,
+    // }
+
+
+    // const richDeveloper: Developer<AppleWatch,YamahaBike> = {
+    //     name: 'Rich reduan',
+    //     computer: {
+    //         brand: "HP",
+    //         model: "iore",
+    //         releaseYear: 7864,
+    //     },
+    //     smartWatch: {
+    //         brand: 'APPLE WATCH',
+    //         model: 'kgfjw66',
+    //         heartTrack: true,
+    //         sleepTrack: true,
+
+    //     },
+    //     bike:{
+    //         model : 'Yamaha',
+    //         engineCapacity : '100CC',
+    //     }
+
+    // }
+    
+
+    interface Developer {
+        name : string,
+        computer :{
+            brand : string,
+            model : string,
+            releseYear : number,
         }
-        smartWatch: T;
-        bike?: X
+        smartWatch : TemplateStringsArray,
     }
 
-    type EmilabWatch = {
-        brand: string,
-        model: string,
-        display: string,
-    }
-
-    const poorDeveloper: Developer<EmilabWatch,null> = {
-        name: 'reduan',
-        computer: {
-            brand: "Asus",
-            model: "iore",
-            releaseYear: 7864,
-        },
-        smartWatch: {
-            brand: 'Emilab',
-            model: 'kw66',
-            display: 'OLED',
+    const poorDeveloper : Developer<> = {
+        name : 'reduan',
+        computer:{
+            brand : 'Asus',
+            model : 'fahsdf',
+            releaseYear :89435,
         }
-
-    }
-
-    interface AppleWatch {
-        brand: string,
-        model: string,
-        heartTrack: boolean,
-        sleepTrack: boolean,
-    }
-
-    interface YamahaBike {
-        model: string,
-        engineCapacity : string,
-    }
-
-
-    const richDeveloper: Developer<AppleWatch,YamahaBike> = {
-        name: 'Rich reduan',
-        computer: {
-            brand: "HP",
-            model: "iore",
-            releaseYear: 7864,
-        },
-        smartWatch: {
-            brand: 'APPLE WATCH',
-            model: 'kgfjw66',
-            heartTrack: true,
-            sleepTrack: true,
-
-        },
-        bike:{
-            model : 'Yamaha',
-            engineCapacity : '100CC',
+        smartWatch :{
+            brand : 'Emilab',
+            model :'adf',
+            display : 'oeld',
         }
-
     }
-
-
 
 
 }
