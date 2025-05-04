@@ -67,60 +67,114 @@
     // console.log(UserWithID);
 
 
-    type GenaricTupleTwo<T, U> = [T, U];
+    // type GenaricTupleTwo<T, U> = [T, U];
 
-    interface UsersName {
-        firstName: string,
-        middleName: string,
-        lastName: string,
+    // interface UsersName {
+    //     firstName: string,
+    //     middleName: string,
+    //     lastName: string,
+    // }
+
+    // interface UserContact {
+    //     phone: number,
+    //     email: string,
+    // }
+
+    // interface UserAddress {
+    //     presentAdd: string;
+    //     permanentAdd: string;
+    // }
+
+    // interface UserInfo {
+    //     name: UsersName;
+    //     userContact: UserContact;
+    //     userAddress: UserAddress;
+    // }
+
+    // const Person: GenaricTupleTwo<number, UserInfo> = [
+    //     874364389,
+    //     {
+    //         name: {
+    //             firstName: 'reduan',
+    //             middleName: 'ahmad',
+    //             lastName: 'rasel',
+    //         },
+    //         userContact: {
+    //             phone: 768453,
+    //             email: 'A@gjkdfa.com',
+    //         },
+    //         userAddress: {
+    //             presentAdd: 'Dhaka',
+    //             permanentAdd: 'Brahmanbaria',
+    //         }            
+    //     }
+
+    // ];
+
+    // const printUserInfo = (person: GenaricTupleTwo<number, UserInfo>) => {
+    //     const [id, info] = person;
+    //     console.log(`ID: ${id}`);
+    //     console.log(`Full Name: ${info.name.firstName} ${info.name.middleName} ${info.name.lastName}`);
+    //     console.log(`Email: ${info.userContact.email}, Phone: ${info.userContact.phone}`);
+    //     console.log(`Address: Present - ${info.userAddress.presentAdd}, Permanent - ${info.userAddress.permanentAdd}`);
+    // };
+
+    // printUserInfo(Person);
+
+
+    //generic type 
+
+
+    type GenaricArray<T> = Array<T>
+
+    // const rollNumber :number[]  = [3,4,6];
+    const rollNumber: GenaricArray<number> = [3, 4, 6];
+
+
+
+    //const mentors : string[] = ['Mr.x ','Mr.Y','Mr.z']
+
+    const mentors: GenaricArray<string> = ['Mr.x ', 'Mr.Y', 'Mr.z']
+
+
+    //const boolArray : boolean[] = [true,false,true]
+    const boolArray: GenaricArray<boolean> = [true, false, true]
+
+    interface User {
+        name : string,
+        age : number,
     }
 
-    interface UserContact {
-        phone: number,
-        email: string,
-    }
 
-    interface UserAddress {
-        presentAdd: string;
-        permanentAdd: string;
-    }
-    
-    interface UserInfo {
-        name: UsersName;
-        userContact: UserContact;
-        userAddress: UserAddress;
-    }
 
-    const Person: GenaricTupleTwo<number, UserInfo> = [
-        874364389,
+    const user: GenaricArray<User> = [
         {
-            name: {
-                firstName: 'reduan',
-                middleName: 'ahmad',
-                lastName: 'rasel',
-            },
-            userContact: {
-                phone: 768453,
-                email: 'A@gjkdfa.com',
-            },
-            userAddress: {
-                presentAdd: 'Dhaka',
-                permanentAdd: 'Brahmanbaria',
-            }            
+            name: 'reudna',
+            age: 328432,
+        },
+        {
+            name: 'ahamd',
+            age: 87569,
+        },
+    ]
+
+
+    //generic tuple 
+
+    type GenericTuple<X,Y> = [X,Y]
+
+    const manus : GenericTuple<string,string> = ['Mr.x', 'Mr.Y']
+
+
+    const UserWithId  : GenericTuple<number,{name : string , email: string}> = [
+        212313,
+        {
+            name : 'reduan',
+            email : 'a@gmail.com',
         }
+    ]
 
-    ];
 
-    const printUserInfo = (person: GenaricTupleTwo<number, UserInfo>) => {
-        const [id, info] = person;
-        console.log(`ID: ${id}`);
-        console.log(`Full Name: ${info.name.firstName} ${info.name.middleName} ${info.name.lastName}`);
-        console.log(`Email: ${info.userContact.email}, Phone: ${info.userContact.phone}`);
-        console.log(`Address: Present - ${info.userAddress.presentAdd}, Permanent - ${info.userAddress.permanentAdd}`);
-    };
-    
-    printUserInfo(Person);
-    
 
 
 

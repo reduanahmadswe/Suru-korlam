@@ -6,7 +6,6 @@
     
     const rollNumbers : GenaricArray<number> = [3,6,8];
     console.log(rollNumbers);
-
     //const mentors : string[] = ['Mr.X','Mr.Y','Mr.Z'];
     const mentors : GenaricArray<string> = ['Mr.X','Mr.Y','Mr.Z'];
     console.log(mentors);
